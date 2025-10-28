@@ -242,9 +242,153 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0cce30ec-d84d-43fa-a917-43b88b13e186
     m_ActionName: 'Player/Interact[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3034619801824773679}
+        m_TargetAssemblyTypeName: InputManagement.InputManager, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 82e82126-684c-494f-a134-838cc58c3d94
+    m_ActionName: 'Player2/Move[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3034619801824773679}
+        m_TargetAssemblyTypeName: InputManagement.InputManager, Assembly-CSharp
+        m_MethodName: Aim
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ef217c67-cc41-4a8c-a1f4-13741963cf93
+    m_ActionName: 'Player2/Aim[/Mouse/delta,/Pen/delta]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3034619801824773679}
+        m_TargetAssemblyTypeName: InputManagement.InputManager, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 24dfe3d2-73dc-4dd6-8007-faa3774c527c
+    m_ActionName: 'Player2/Jump[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3034619801824773679}
+        m_TargetAssemblyTypeName: InputManagement.InputManager, Assembly-CSharp
+        m_MethodName: Primary
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 84ee06fd-02b7-4756-8ea2-b496b66535a7
+    m_ActionName: 'Player2/Primary[/Mouse/leftButton,/Keyboard/enter,/Keyboard/c]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3034619801824773679}
+        m_TargetAssemblyTypeName: InputManagement.InputManager, Assembly-CSharp
+        m_MethodName: Secondary
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9e318ef5-8470-4c68-884b-e2f439bd8967
+    m_ActionName: 'Player2/Secondary[/Mouse/rightButton,/Keyboard/v,/Keyboard/q]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3034619801824773679}
+        m_TargetAssemblyTypeName: InputManagement.InputManager, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7532ce80-b4ca-44b3-91d2-92e03c281d1d
+    m_ActionName: 'Player2/Interact[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3034619801824773679}
+        m_TargetAssemblyTypeName: InputManagement.InputManager, Assembly-CSharp
+        m_MethodName: Crouch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1e37d16c-27a0-4630-9197-bced7873b715
+    m_ActionName: 'Player2/Crouch[/Keyboard/c]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3034619801824773679}
+        m_TargetAssemblyTypeName: InputManagement.InputManager, Assembly-CSharp
+        m_MethodName: Sprint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c462d8eb-1fc1-45ea-a373-f7b07e343257
+    m_ActionName: 'Player2/Sprint[/Keyboard/shift]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3034619801824773679}
+        m_TargetAssemblyTypeName: InputManagement.InputManager, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2eefb75d-163b-4a05-be48-db42e9419ff4
+    m_ActionName: 'Player2/Pause[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &3034619801824773679

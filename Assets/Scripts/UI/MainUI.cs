@@ -6,8 +6,10 @@ public class MainUI : MonoBehaviour
 {
     [SerializeField] private GameObject settingsScreen;
     [SerializeField] private GameObject startScreen;
+    [SerializeField] private GameObject selectScreen;
     
     /*--------Temporary--------*/
+    // Used for the "About" button
     [SerializeField] private GameObject aboutPanel;
 
     private void Awake()
