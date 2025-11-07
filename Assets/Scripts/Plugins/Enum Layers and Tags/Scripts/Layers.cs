@@ -8,6 +8,7 @@ public static class Layers
     public const int Ground = 5;
     public const int SupplyDrop = 6;
     public const int Player = 7;
+    public const int Attack = 8;
 
     public static int ToLayerMask(int layer)
     {
