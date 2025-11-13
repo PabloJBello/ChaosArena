@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 9200389090186705443}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8597, y: -2.7556, z: 0}
-  m_LocalScale: {x: 0.4404635, y: 1.5085859, z: 1}
+  m_LocalPosition: {x: -3.9167, y: -2.841, z: 0}
+  m_LocalScale: {x: 0.29952052, y: 1.1485175, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -179,7 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c071ae538277b490b8d98adb3d12624b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WallHealth
-  maxHealth: 100
 --- !u!114 &5121570498401874112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +191,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4cab25cf55ca40c2a83c67890555027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RockWall
-  pushForce: 12
-  rb: {fileID: 3427308955962650984}
-  wallHealth: {fileID: 6035142478927462856}

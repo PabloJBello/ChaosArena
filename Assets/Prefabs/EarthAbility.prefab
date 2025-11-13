@@ -44,9 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685b4fba2fe83436a85b4a2d0eb4f4b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Abilities.Earth.EarthAbility
-  elementName: Earth
-  primaryCooldown: 5
-  secondaryCooldown: 5
   boulderPrefab: {fileID: 4305382247872319921, guid: 84534b793bc57434bb869f6de36410df, type: 3}
   rockWallPrefab: {fileID: 9200389090186705443, guid: 203419a77d94c45ceb931f8daf531543, type: 3}
   spawnPoint: {fileID: 8728816721253186194}
+  boulderForce: 15
+  wallDistance: 1

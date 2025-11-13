@@ -12,6 +12,7 @@ namespace InputManagement
         private enum ButtonType
         {
             jump,
+            basicAttack,
             primary,
             secondary,
             interact,
@@ -27,6 +28,9 @@ namespace InputManagement
             {
                 case ButtonType.jump:
                     buttonInput = inputManager.Input.jump;
+                    break;
+                case ButtonType.basicAttack:
+                    buttonInput = inputManager.Input.basicAttack;
                     break;
                 case ButtonType.primary:
                     buttonInput = inputManager.Input.primary;

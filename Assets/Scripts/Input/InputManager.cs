@@ -128,6 +128,18 @@ namespace InputManagement
             }
         }
 
+        public void BasicAttack(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                input.basicAttack.OnPress();
+            }
+            else if (context.canceled)
+            {
+                input.basicAttack.OnRelease();
+            }
+        }
+        
         public void Primary(InputAction.CallbackContext context)
         {
             if (context.performed)

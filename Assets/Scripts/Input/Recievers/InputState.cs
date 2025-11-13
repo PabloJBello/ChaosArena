@@ -9,6 +9,7 @@ namespace InputManagement
         public AxisInputProvider move = new AxisInputProvider();
         public AxisInputProvider aim = new AxisInputProvider();
         public ButtonInputProvider jump = new ButtonInputProvider();
+        public ButtonInputProvider basicAttack = new ButtonInputProvider();
         public ButtonInputProvider primary = new ButtonInputProvider();
         public ButtonInputProvider secondary = new ButtonInputProvider();
         public ButtonInputProvider interact = new ButtonInputProvider();

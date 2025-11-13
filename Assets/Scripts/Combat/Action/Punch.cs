@@ -34,7 +34,7 @@ public class Punch : MonoBehaviour
     {
         if (fighterController.InMovementState() && !attacking)
         {
-            if (fighterController.Input.primary.GetPressedThisFrame())
+            if (fighterController.Input.basicAttack.GetPressedThisFrame())
             {
                 StartCoroutine(PerformPunch());
             }
