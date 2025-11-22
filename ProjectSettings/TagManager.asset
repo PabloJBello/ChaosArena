@@ -5,18 +5,19 @@ TagManager:
   serializedVersion: 3
   tags:
   - Climbable
-  - Projectile
+  - Object
+  - Death
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Attack
   - Water
   - UI
   - Ground
   - SupplyDrop
   - Player
-  - Attack
+  - Death
   - 
   - 
   - 

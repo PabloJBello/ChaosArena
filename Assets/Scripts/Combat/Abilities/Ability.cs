@@ -4,8 +4,14 @@ using ControllerSystem;
 [RequireComponent(typeof(FighterController))]
 public class Ability : MonoBehaviour
 { 
+    [SerializeField] private float primaryCooldown = 1f;
+    [SerializeField] private float secondaryCooldown = 3f;
+
     private BaseElementalAbility currentAbility;
     private FighterController fighterController;
+    
+    private float lastPrimaryTime = Mathf.NegativeInfinity;
+    private float lastSecondaryTime = Mathf.NegativeInfinity;
 
     private void Awake()
     {
@@ -30,11 +36,27 @@ public class Ability : MonoBehaviour
         var input = fighterController.Input;
         if (input == null) return;
 
-        if (input.primary.GetPressedThisFrame())
+        if (input.primary.GetPressedThisFrame() && CanUsePrimary())
+        {
             currentAbility?.UsePrimary();
+            lastPrimaryTime = Time.time;
+        }
 
-        if (input.secondary.GetPressedThisFrame())
+        if (input.secondary.GetPressedThisFrame() && CanUseSecondary())
+        {
             currentAbility?.UseSecondary();
+            lastSecondaryTime = Time.time;
+        }
+    }
+
+    private bool CanUsePrimary()
+    {
+        return Time.time >= lastPrimaryTime + primaryCooldown;
+    }
+
+    private bool CanUseSecondary()
+    {
+        return Time.time >= lastSecondaryTime + secondaryCooldown;
     }
 
     public void EquipAbility(BaseElementalAbility newAbility)

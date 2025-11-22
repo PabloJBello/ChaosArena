@@ -31,6 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 968679534496418331}
   - {fileID: 9174245936687025988}
   m_Father: {fileID: 4884168684583342692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -400,7 +401,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4884168684583342692}
+  m_Father: {fileID: 6981609773901529442}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7486030529702107177
 MonoBehaviour:
@@ -571,6 +572,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _noPlatformZone: {fileID: 7838847279418289294}
+  uiManager: {fileID: 0}
 --- !u!61 &7838847279418289294
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -656,7 +658,6 @@ Transform:
   m_Children:
   - {fileID: 7720832341052419380}
   - {fileID: 6981609773901529442}
-  - {fileID: 968679534496418331}
   - {fileID: 1539037558027085262}
   - {fileID: 500102533553787956}
   m_Father: {fileID: 0}
@@ -839,6 +840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f70a1c79722649038bcb8592c1d4db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ability
+  primaryCooldown: 0.5
+  secondaryCooldown: 1
 --- !u!114 &6338615905957698019
 MonoBehaviour:
   m_ObjectHideFlags: 0

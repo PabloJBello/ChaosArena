@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace ControllerSystem.Platformer2D
@@ -15,6 +16,8 @@ namespace ControllerSystem.Platformer2D
         [SerializeField] private LayerMask _platformMask;
         [Tooltip("The bottom edge of this box should be a smidge above the top edge of the groundBox, and should be inside the collision of the player.")]
         [SerializeField] private BoxCollider2D _noPlatformZone;
+        
+        [SerializeField] private UIManager uiManager;
         public bool Grounded { get; private set; }
         public Collider2D LastCollision { get; protected set; }
         public float LastCollisionLeftTime { get; protected set; } = Mathf.NegativeInfinity;
@@ -88,6 +91,15 @@ namespace ControllerSystem.Platformer2D
         public static Collider2D Physics2DOverlapBoxCollider(BoxCollider2D boxCollider2D, LayerMask layermask)
         {
             return Physics2D.OverlapBox((Vector2)boxCollider2D.transform.position + boxCollider2D.offset, boxCollider2D.size * boxCollider2D.transform.lossyScale, 0, layermask);
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("Death"))
+            {
+                transform.parent.parent.gameObject.SetActive(false);
+                uiManager.ShowWinnerText();
+            }
         }
     }
 

@@ -1,14 +1,18 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private GameObject settingsScreen;
+    [SerializeField] private Text winnerText;
     //[SerializeField] private AudioClip pauseSound;  // Sound played when game paused
 
     private void Awake()
     {
+        winnerText.gameObject.SetActive(false);
         pauseScreen.SetActive(false);
         settingsScreen.SetActive(false);
     }
@@ -66,5 +70,18 @@ public class UIManager : MonoBehaviour
     public void Quit()
     {
         GameController.QuitGame();
+    }
+
+    public void ShowWinnerText()
+    {
+        Debug.Log("Show winner");
+        winnerText.gameObject.SetActive(true);
+        StartCoroutine(EndGame());
+    }
+    
+    private IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(0);
     }
 }

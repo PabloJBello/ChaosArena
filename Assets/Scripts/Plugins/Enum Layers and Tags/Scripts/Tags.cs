@@ -8,5 +8,6 @@ public static class Tags
     public const string Player = @"Player";
     public const string GameController = @"GameController";
     public const string Climbable = @"Climbable";
-    public const string Projectile = @"Projectile";
+    public const string Object = @"Object";
+    public const string Death = @"Death";
 }

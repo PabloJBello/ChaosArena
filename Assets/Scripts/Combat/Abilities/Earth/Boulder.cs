@@ -23,44 +23,52 @@ public class Boulder : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log($"Boulder hit: {collision.gameObject.name}");
         if (hasCollided) return;
         hasCollided = true;
-
+        
         GameObject other = collision.gameObject;
 
-        if (other.TryGetComponent(out Hurtbox hurtbox))
+        if (other.layer == LayerMask.NameToLayer("Player"))
         {
-            if (hurtbox.Team == team)
+            Debug.Log("Player hit");
+            if (other.TryGetComponent(out Hurtbox hurtbox))
             {
+                if (hurtbox.Team == team)
+                {
+                    DestroySelf();
+                    return;
+                }
+
+                // Build hit info
+                HitInfo hit = new HitInfo
+                {
+                    knockback = GetKnockbackDirection(other.transform),
+                    hitStop = hitstop,
+                    team = team
+                };
+
+                hurtbox.TakeDamage(hit);
+
                 DestroySelf();
                 return;
             }
+        }
 
-            // Build hit info
-            HitInfo hit = new HitInfo
+        if (other.layer == LayerMask.NameToLayer("Ground") || other.layer == LayerMask.NameToLayer("Attack"))
+        {
+            DestroySelf();
+            return;
+        }
+
+        if (other.layer == LayerMask.NameToLayer("Default"))
+        {
+            if (other.TryGetComponent(out WallHealth wallHealth))
             {
-                damage = damage,
-                knockback = GetKnockbackDirection(other.transform),
-                hitStop = hitstop,
-                team = team
-            };
-
-            hurtbox.TakeDamage(hit);
-
-            DestroySelf();
-            return;
-        }
-
-        if (other.CompareTag("Climbable") || other.layer == LayerMask.NameToLayer("Ground"))
-        {
-            DestroySelf();
-            return;
-        }
-
-        if (other.CompareTag("Untagged") || other.layer == LayerMask.NameToLayer("Default"))
-        {
+                wallHealth.TakeDamage(damage);
+            }
             DestroySelf();
             return;
         }
